@@ -1,0 +1,13 @@
+class Carro:
+    def __init__(self,marca,modelo,ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+    def apresentar(self):
+        print(f"Carro na marca {self.marca}, modelo {self.modelo} e ano {self.ano}.")
+
+carro1 = Carro("Volkswagem", "GOL", 2026)
+carro2 = Carro("Fiat", "UNO", 2025)
+
+carro1.apresentar()
+carro2.apresentar()
