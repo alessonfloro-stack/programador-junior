@@ -1,0 +1,22 @@
+#Adicionando métodos - Usando a classe Carro, adicione um método chamado atualizar_ano(novo_ano) que:Receba um novo ano como parâmetro - Atualize o atributo ano do carro. Depois crie um carro, exiba o ano, atualize e exiba novamente.
+class Carro:
+    def __init__(self,marca,modelo,ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+    def apresentar(self):
+        print(f"Carro na marca {self.marca}, modelo {self.modelo} e ano {self.ano}.")
+    def atualizar_ano(self, novo_ano):
+        self.ano = novo_ano
+
+
+carro1 = Carro("Volkswagem", "GOL", 2025)
+carro2 = Carro("Fiat", "UNO", 2024)
+carro3 = Carro("Ferrari", "Spyder", 2026)
+
+carro1.atualizar_ano(2013)
+carro2.atualizar_ano(2000)
+
+carro1.apresentar()
+carro2.apresentar()
+carro3.apresentar()
