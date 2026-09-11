@@ -1,0 +1,19 @@
+#Crie uma classe chamada Turma:
+class Turma:
+    def __init__(self):
+        #Atributo: alunos — uma lista vazia.
+        self.alunos = []
+
+    #adicionar_aluno(nome) — adiciona um aluno na lista
+    def adicionar_aluno(self, nome):
+        self.alunos.append(nome)
+
+    #listar_alunos() — exibe todos os alunos
+    def listar_alunos(self):
+        for aluno in self.alunos:
+            print(aluno)
+ #Você cria uma turma e adiciona alunos nela:           
+turma1 = Turma()
+turma1.adicionar_aluno ("João")
+turma1.adicionar_aluno ("Pedro")
+turma1.listar_alunos()
