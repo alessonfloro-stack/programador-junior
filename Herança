@@ -1,0 +1,27 @@
+#Herança!
+#Esse é o conceito mais poderoso da POO.
+#Imagina que você tem uma classe Animal e quer criar classes Cachorro e Gato. Os dois são animais — têm nome e som. Mas cada um faz sons diferentes.
+#Herança permite que Cachorro e Gato herdem tudo de Animal e adicionem só o que é diferente.
+#Crie:
+#Classe Animal com atributo nome e método apresentar()
+#Classe Cachorro que herda de Animal com método som() retornando "Au au!"
+#Classe Gato que herda de Animal com método som() retornando "Miau!"
+
+class Animal:
+    def __init__(self, nome):
+        self.nome = nome
+    def apresentar(self):
+        print(f"Eu sou {self.nome}")
+class Cachorro(Animal):
+    def som(self):
+        print(f"Au au!")
+class Gato(Animal):
+    def som(self):
+        print(f"Miau")
+
+gato1 = Gato("Garfield")
+gato1.apresentar()
+gato1.som()
+cachorro1 = Cachorro("Scooby")
+cachorro1.apresentar()
+cachorro1.som()
