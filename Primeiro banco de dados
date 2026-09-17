@@ -1,0 +1,25 @@
+import sqlite3
+
+# Conectar ao banco (cria o arquivo se não existir)
+conexao = sqlite3.connect("escola.db")
+
+# Criar um cursor — é o que executa os comandos SQL
+cursor = conexao.cursor()
+
+# Criar a tabela
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS alunos (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nome TEXT,
+        turno TEXT,
+        turma TEXT,
+        escola TEXT
+    )
+""")
+
+# Salvar as alterações
+conexao.commit()
+print("Banco criado com sucesso!")
+
+# Fechar a conexão
+conexao.close()
