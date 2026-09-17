@@ -1,0 +1,23 @@
+class Animal:
+    def __init__(self, nome):
+        self.nome = nome
+    def apresentar(self):
+        print(f"Eu sou {self.nome}")
+class Cachorro(Animal):
+    def __init__(self, nome, raca):
+        super().__init__(nome)
+        self.raca = raca
+    def apresentar(self):
+        print(f"Eu sou {self.nome} da raça {self.raca}.")
+    def som(self):
+        print(f"Au au!")        
+class Gato(Animal):
+    def som(self):
+        print(f"Miau")
+
+gato1 = Gato("Garfield")
+gato1.apresentar()
+gato1.som()
+cachorro1 = Cachorro("Scooby","Grandão")
+cachorro1.apresentar()
+cachorro1.som()
