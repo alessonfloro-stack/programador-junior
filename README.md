@@ -1,7 +1,7 @@
 # programador-junior
 Repositório com meus estudos de Python do zero.
 
-O que aprendi:
+## O que aprendi:
 1. Variáveis e tipos de dados
 2. Condicionais
 3. Listas e loops
@@ -9,3 +9,16 @@ O que aprendi:
 5. Dicionários
 6. Try/Except
 7. Arquivos
+8. Git e GitHub
+9. FastAPI (conceitos)
+10. Orientação a Objetos (POO)
+11. Banco de dados com SQLite
+
+## Conceitos de POO:
+- Classes e objetos
+- Herança
+- Polimorfismo
+- Encapsulamento
+
+## Projetos:
+- Diário com datetime e arquivos
