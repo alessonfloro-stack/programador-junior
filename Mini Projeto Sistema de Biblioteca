@@ -1,0 +1,61 @@
+#Passo 1 — Classe Livro
+#Crie uma classe chamada Livro com:
+#Atributos: titulo, autor e disponivel (começa como True)
+#Método __str__ que exiba:
+#Título: Python do Zero
+#Autor: Fulano
+#Disponível: Sim
+
+class Livro:
+    def __init__(self,titulo,autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponivel = True
+    def __str__(self):
+        status = "Sim" if self.disponivel else "Não"
+        return f"Título: {self.titulo}, Autor:{self.autor}, Disponibilidade: {status}."
+
+#Passo 2 — Classe Biblioteca
+#Agora crie uma classe chamada Biblioteca com:
+#Atributo: livros — lista vazia
+#Método: adicionar_livro(livro) — adiciona um livro na lista
+#Método: listar_livros() — exibe todos os livros
+
+class Biblioteca:
+    def __init__(self):
+        self.livros = []
+    def adicionar_livro(self, livro):
+        self.livros.append(livro)
+    def emprestar_livro(self, titulo):
+        for livro in self.livros:#Percorre a lista 
+            if livro.titulo == titulo:# Se o titulo for igual 
+                livro.disponivel = False #Muda para False
+    def devolver_livro(self, titulo):
+        for livro in self.livros:
+            if livro.titulo == titulo:
+                livro.disponivel = True
+    def listar_livros(self):
+        for livro in self.livros:
+            print(f"Todos os Livros:")
+            print(f"{livro}")
+#CRIAR BIBLIOTECA
+minha_biblioteca = Biblioteca()
+#CRIAR OBJETOS = LIVROS
+livro1 = Livro("Bíblia", "Deus")
+livro2 = Livro("O Banquete do Cordeiro", "Scott Hahn")
+livro3 = Livro("A Fé Explicada", "Leo Trese")
+#ADICIONAR LIVRO A LISTA VAZIA
+minha_biblioteca.adicionar_livro(livro1)
+minha_biblioteca.adicionar_livro(livro2)
+minha_biblioteca.adicionar_livro(livro3)
+#CHAMAR O EMPRESTAR
+minha_biblioteca.emprestar_livro("O Banquete do Cordeiro")
+#CHAMAR O DEVOLVER
+minha_biblioteca.devolver_livro("O Banquete do Cordeiro")
+#APRESENTAR OS LIVROS LISTADOS
+minha_biblioteca.listar_livros()
+
+#Agora o Passo 3 — Emprestar e Devolver!
+#Adicione na classe Biblioteca:
+#Método emprestar_livro(titulo) — muda o disponivel para False
+#Método devolver_livro(titulo) — muda o disponivel para True
