@@ -35,8 +35,8 @@ class Biblioteca:
             if livro.titulo == titulo:
                 livro.disponivel = True
     def listar_livros(self):
+        print(f"Todos os Livros:")
         for livro in self.livros:
-            print(f"Todos os Livros:")
             print(f"{livro}")
 #CRIAR BIBLIOTECA
 minha_biblioteca = Biblioteca()
